@@ -76,7 +76,7 @@ h1 { font-size: 22px; font-family: 'ClanPro-WideBook'; }
 [contact] form ::-webkit-input-placeholder { font-family: 'ClanPro-WideBook'; font-size: 18px; }
 
 /* footer */
-[footer] { background-color: #404040; height: 100px; }
+[footer] { background-color: #404040; height: 100px; display: block; }
 [footer] h2 { color: #c2c2c2; font-size: 16px; padding: 40px 82px; }
 
 /* thanks */
@@ -92,6 +92,7 @@ h1 { font-size: 22px; font-family: 'ClanPro-WideBook'; }
 @media screen and (min-width: 768px) { [header] .gradient { background: -webkit-linear-gradient(0deg, #007934 0%, rgba(242, 242, 242, 0.4) 50%, rgba(173, 7, 61, 0.6) 100%); background: linear-gradient(90deg, #007934 0%, rgba(242, 242, 242, 0.4) 50%, rgba(173, 7, 61, 0.6) 100%); }
   [header] .text h1 { font-size: 40px; max-width: 440px; }
   [header] .text p { max-width: 400px; }
+  [header] .text [navbar] img { padding-left: 82px; }
   [header] .text [navbar] span { padding-right: 24px; }
   [politics], [services], [contact], [thanks] { position: relative; }
   [politics] h1, [services] h1, [contact] h1, [thanks] h1 { font-size: 40px; padding-left: 82px; max-width: 330px; }
@@ -100,7 +101,7 @@ h1 { font-size: 22px; font-family: 'ClanPro-WideBook'; }
   [politics] [contains="policies"] [policy] p, [services] [contains="policies"] [policy] p, [contact] [contains="policies"] [policy] p, [thanks] [contains="policies"] [policy] p { font-size: 17px; width: 215px; }
   [grid] { padding-left: 82px; width: calc(100% - 164px); }
   [grid] [row] { width: 100%; }
-  [grid] [row] [image] { margin: 5px; height: 120px; }
+  [grid] [row] [image] { margin: 5px; height: 180px; }
   [grid] [row] [image] img { width: 100%; height: 100%; }
   [grid] [row] [image]:first-of-type { margin-left: 0; }
   [grid] [row] [image]:last-of-type { margin-right: 0; }
