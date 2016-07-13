@@ -3,7 +3,7 @@
 
 html { font-size: 16px; }
 
-body { font-size: 62.5%; font-family: 'ClanPro-Thin'; }
+body { font-size: 62.5%; font-family: 'ClanPro-Thin'; overflow-x: hidden; }
 
 a { text-decoration: none; display: inline-block; }
 
@@ -48,23 +48,28 @@ h1 { font-size: 22px; font-family: 'ClanPro-WideBook'; }
 [header] .text p { padding-top: 26px; font-size: 20px; max-width: 230px; }
 
 /* politics */
-[politics], [services], [contact] { color: #424242; }
-[politics] h1, [services] h1, [contact] h1 { padding: 50px 0 50px 12px; }
-[politics] [contains="policies"], [services] [contains="policies"], [contact] [contains="policies"] { display: block; margin: 0 auto; padding-left: 12px; }
-[politics] [contains="policies"] [policy], [services] [contains="policies"] [policy], [contact] [contains="policies"] [policy] { padding: 20px 0; display: block; text-align: center; }
-[politics] [contains="policies"] [policy] img, [services] [contains="policies"] [policy] img, [contact] [contains="policies"] [policy] img { width: 72px; height: 72px; }
-[politics] [contains="policies"] [policy] h3, [services] [contains="policies"] [policy] h3, [contact] [contains="policies"] [policy] h3 { font-size: 22px; padding: 11px 0; }
-[politics] [contains="policies"] [policy] p, [services] [contains="policies"] [policy] p, [contact] [contains="policies"] [policy] p { width: 250px; display: block; margin: 0 auto; }
+[politics], [services], [contact], [thanks] { overflow-x: hidden; color: #424242; min-height: 100vh; }
+[politics] h1, [services] h1, [contact] h1, [thanks] h1 { padding: 50px 0 50px 12px; }
+[politics] [contains="policies"], [services] [contains="policies"], [contact] [contains="policies"], [thanks] [contains="policies"] { position: relative; display: block; margin: 0 auto; padding-left: 12px; }
+[politics] [contains="policies"] img.logo, [services] [contains="policies"] img.logo, [contact] [contains="policies"] img.logo, [thanks] [contains="policies"] img.logo { position: absolute; right: 0%; width: 30%; -webkit-transform: translateX(50%); -ms-transform: translateX(50%); transform: translateX(50%); min-width: 300px; z-index: -1; }
+[politics] [contains="policies"] [policy], [services] [contains="policies"] [policy], [contact] [contains="policies"] [policy], [thanks] [contains="policies"] [policy] { padding: 20px 0; display: block; text-align: center; }
+[politics] [contains="policies"] [policy] img, [services] [contains="policies"] [policy] img, [contact] [contains="policies"] [policy] img, [thanks] [contains="policies"] [policy] img { width: 72px; height: 72px; }
+[politics] [contains="policies"] [policy] h3, [services] [contains="policies"] [policy] h3, [contact] [contains="policies"] [policy] h3, [thanks] [contains="policies"] [policy] h3 { font-size: 22px; padding: 11px 0; }
+[politics] [contains="policies"] [policy] p, [services] [contains="policies"] [policy] p, [contact] [contains="policies"] [policy] p, [thanks] [contains="policies"] [policy] p { width: 250px; display: block; margin: 0 auto; }
 
 /* grid */
 [grid] { padding-left: 12px; width: calc(100% - 24px); }
 [grid] [row] { width: 100%; }
 [grid] [row] [image] { margin: 5px 0; position: relative; display: inline-block; vertical-align: top; height: 150px; }
-[grid] [row] [image] img { width: 100%; height: 100%; }
+[grid] [row] [image] img { width: 100%; height: 100%; z-index: -1; }
+[grid] [row] [image] [filter] { position: absolute; background-color: rgba(0, 0, 0, 0.5); z-index: -1; width: 100%; height: 100%; }
+[grid] [row] [image] [text] { height: 100%; width: 100%; z-index: 3; font-size: 18px; color: white; font-family: 'ClanPro-Thin'; }
+[grid] [row] [image] [text] h3 { position: absolute; bottom: 5px; left: 5px; font-size: 16px; width: 160px; font-family: 'ClanPro-Thin'; font-weight: lighter; }
 [grid] [row] [image="1-3"], [grid] [row] [image="2-3"] { width: 100%; }
 
 /* contact */
 [contact] h2 { padding-left: 12px; max-width: 270px; }
+[contact] h2 b { font-weight: bold; font-family: 'ClanPro-WideBook'; }
 [contact] form { padding-left: 12px; padding-top: 24px; padding-bottom: 44px; width: 300px; }
 [contact] form input, [contact] form textarea { width: 270px; padding: 8px; margin: 2.5px; font-family: 'ClanPro-WideBook'; font-size: 18px; }
 [contact] form button { width: 290px; padding: 16px; margin-left: 2px; color: white; font-size: 18px; background-color: #555555; border: 0; font-family: 'ClanPro-WideBook'; }
@@ -74,6 +79,13 @@ h1 { font-size: 22px; font-family: 'ClanPro-WideBook'; }
 [footer] { background-color: #404040; height: 100px; }
 [footer] h2 { color: #c2c2c2; font-size: 16px; padding: 40px 82px; }
 
+/* thanks */
+[thanks] { width: 100vw; overflow: hidden; }
+[thanks] img { position: absolute; right: 0; top: 50%; -webkit-transform: translate(50%, -50%); -ms-transform: translate(50%, -50%); transform: translate(50%, -50%); z-index: -1; }
+[thanks] h1 { font-size: 35px; }
+[thanks] h2, [thanks] a { font-size: 20px; padding-left: 12px; font-weight: bold; max-width: 280px; }
+[thanks] a { padding-top: 30px; font-size: 18px; }
+
 /* media queries */
 @media screen and (min-width: 425px) { [header] .text [navbar] img { padding: 24px 12px 24px 24px; }
   [header] .text h1, [header] .text p { padding-left: 82px; } }
@@ -81,11 +93,11 @@ h1 { font-size: 22px; font-family: 'ClanPro-WideBook'; }
   [header] .text h1 { font-size: 40px; max-width: 440px; }
   [header] .text p { max-width: 400px; }
   [header] .text [navbar] span { padding-right: 24px; }
-  [politics], [services], [contact] { position: relative; }
-  [politics] h1, [services] h1, [contact] h1 { font-size: 40px; padding-left: 82px; max-width: 330px; }
-  [politics] [contains="policies"], [services] [contains="policies"], [contact] [contains="policies"] { display: block; text-align: center; }
-  [politics] [contains="policies"] [policy], [services] [contains="policies"] [policy], [contact] [contains="policies"] [policy] { margin: 0 auto; width: 210px; vertical-align: top; display: inline-block; padding: 40px 15px; }
-  [politics] [contains="policies"] [policy] p, [services] [contains="policies"] [policy] p, [contact] [contains="policies"] [policy] p { font-size: 17px; width: 215px; }
+  [politics], [services], [contact], [thanks] { position: relative; }
+  [politics] h1, [services] h1, [contact] h1, [thanks] h1 { font-size: 40px; padding-left: 82px; max-width: 330px; }
+  [politics] [contains="policies"], [services] [contains="policies"], [contact] [contains="policies"], [thanks] [contains="policies"] { display: block; text-align: center; }
+  [politics] [contains="policies"] [policy], [services] [contains="policies"] [policy], [contact] [contains="policies"] [policy], [thanks] [contains="policies"] [policy] { margin: 0 auto; width: 210px; vertical-align: top; display: inline-block; padding: 40px 15px; }
+  [politics] [contains="policies"] [policy] p, [services] [contains="policies"] [policy] p, [contact] [contains="policies"] [policy] p, [thanks] [contains="policies"] [policy] p { font-size: 17px; width: 215px; }
   [grid] { padding-left: 82px; width: calc(100% - 164px); }
   [grid] [row] { width: 100%; }
   [grid] [row] [image] { margin: 5px; height: 120px; }
@@ -97,7 +109,8 @@ h1 { font-size: 22px; font-family: 'ClanPro-WideBook'; }
   [contact] h2 { padding-left: 82px; }
   [contact] form { padding-top: 44px; padding-left: 82px; padding-bottom: 100px; }
   [contact] form input, [contact] form textarea { margin: 5px; }
-  [contact] form button { margin-left: 4px; } }
+  [contact] form button { margin-left: 4px; }
+  [thanks] h2, [thanks] a { padding-left: 82px; } }
 /* font faces */
 @font-face { font-family: 'ClanPro-Thin'; src: url("fonts/ClanPro-Thin.eot"); src: url("fonts/ClanPro-Thin.eot?#iefix") format("embedded-opentype"), url("fonts/ClanPro-Thin.woff") format("woff"), url("fonts/ClanPro-Thin.ttf") format("truetype"); font-weight: 100; font-style: normal; }
 @font-face { font-family: 'ClanPro-WideBook'; src: url("fonts/ClanPro-WideBook.eot"); src: url("fonts/ClanPro-WideBook.eot?#iefix") format("embedded-opentype"), url("fonts/ClanPro-WideBook.woff") format("woff"), url("fonts/ClanPro-WideBook.ttf") format("truetype"); font-weight: normal; font-style: normal; }
