@@ -1,0 +1,364 @@
+/* tag Styles */
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	html {
+		font-size: 16px;
+	}
+	body {
+		font-size: 62.5%;
+		font-family: 'ClanPro-Thin';
+	}
+	a {
+		text-decoration: none;
+		display: inline-block;
+	}
+	p {
+		font-size: 13px; // original 18px
+		font-family: 'ClanPro-Thin';
+	}
+	ul {
+		list-style-type:disc;
+		margin: 1.5em;
+	}
+	ul li {
+		margin: .5em 0;
+	}
+	h1 {
+		font-size: 22px; // original 48px
+		font-family: 'ClanPro-WideBook';
+	}
+	form {
+		
+	}
+	input {
+		
+	}
+	button {
+		
+	}
+	::-webkit-input-placeholder {
+	   font-family: 'ClanPro-Thin';
+	   font-size: 18px;
+	}
+/* reusable classes */
+	.full-width,
+	.full-page {
+		width: 100%;
+	}
+	.full-height, 
+	.full-page {
+		min-height: 100vh;
+	}
+	.container {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.vertical {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.central-text {
+		width: 90vw;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.no-overflow {
+		overflow-x: hidden;
+	}
+	.clear:after {
+		content: "";
+	  	display: table;
+	  	clear: both;
+	}
+/* header */
+	[header] {
+		background-image: url('../img/header.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		div {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.gradient {
+			background : linear-gradient(125deg, rgba(0, 121, 52, 1) 0%, rgba(242, 242, 242, 0.4) 50%, rgba(173, 7, 61, 0.6) 100%);
+			mix-blend-mode: multiply;
+		}
+		.text {
+			color: white;
+			[navbar] {
+				display: block;
+				position: relative;
+				* { 
+					display: inline-block;
+					vertical-align: top;
+				}
+				img {
+					height: 48px; // 72px original
+					width: 48px;
+					padding: 24px 12px;
+				}
+				p {
+					width: 125px;
+					padding: 0;
+					vertical-align: top;
+					padding-top: 27px;
+					font-size: 13px;
+				}
+				span {
+					vertical-align: top;
+					padding-right: 15px;
+					padding-top: 45px;
+					float: right;
+				}
+				[data-content="menu"] {
+					float: right;
+					padding: 25px 0 0 0;
+				}
+			}
+			h1, p {
+				padding-left: 12px;
+			}
+			h1 {
+				padding-top: 78px;
+				max-width: 240px;
+				font-family: 'ClanPro-Thin';
+			}
+			p {
+				padding-top: 26px;
+				font-size: 20px;
+				max-width: 230px;
+			}
+		}
+	}
+/* politics */
+	[politics], 
+	[services],
+	[contact] {
+		color: #424242;
+		h1 {
+			padding: 50px 0 50px 12px;
+		}
+		[contains="policies"] {
+			display: block;
+			margin: 0 auto;
+			padding-left: 12px;
+			[policy] {
+				padding: 20px 0;
+				display: block;
+				text-align: center;
+				img {
+					width: 72px;
+					height: 72px;
+				}
+				h3 {
+					font-size: 22px;
+					padding: 11px 0;
+				}
+				p {
+					width: 250px;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+/* grid */
+	[grid] {
+		padding-left: 12px;
+		width: calc(100% - 24px);
+		[row] {
+			width: 100%;
+			[image] {
+				margin: 5px 0;
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				height: 150px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			[image="1-3"],
+			[image="2-3"] {
+				width: 100%;
+			}
+		}
+	}
+/* contact */
+	[contact] {
+		h2 {
+			padding-left: 12px;
+			max-width: 270px;
+		}
+		form {
+			padding-left: 12px;
+			padding-top: 24px;
+			padding-bottom: 44px;
+			width: 300px;
+			input,
+			textarea {
+				width: 270px;
+				padding: 8px;
+				margin: 2.5px;
+				font-family: 'ClanPro-WideBook';
+				font-size: 18px;
+			}
+			button {
+				width: 290px;
+				padding: 16px;
+				margin-left: 2px;
+				color: white;
+				font-size: 18px;
+				background-color: #555555;
+				border: 0;
+				font-family: 'ClanPro-WideBook';
+			}
+			::-webkit-input-placeholder {
+			  font-family: 'ClanPro-WideBook';
+				font-size: 18px;
+			}
+		}
+	}
+/* footer */
+	[footer] {
+		background-color: #404040;
+		height: 100px;
+		h2 {
+			color: #c2c2c2;
+			font-size: 16px;
+			padding: 40px 82px;
+		}
+	}
+/* media queries */
+	@media screen and (min-width: 425px) {
+		[header] {
+			.text {
+				[navbar] {
+					img {
+						padding: 24px 12px 24px 24px;
+					}
+				}
+				h1, p {
+					padding-left: 82px;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		[header] {
+			.gradient {
+				background : linear-gradient(90deg, rgba(0, 121, 52, 1) 0%, rgba(242, 242, 242, 0.4) 50%, rgba(173, 7, 61, 0.6) 100%);
+			}
+			.text {
+				h1 {
+					font-size: 40px;
+					max-width: 440px;
+				}
+				p {
+					max-width: 400px;
+				}
+				[navbar] {
+					span {
+						padding-right: 24px;
+					}
+				}
+			}
+		}
+		[politics], 
+		[services],
+		[contact] {
+			position: relative;
+			h1 {
+				font-size: 40px;
+			    padding-left: 82px;
+			    max-width: 330px;
+			}
+			[contains="policies"] {
+				display: block;
+				text-align: center;
+				[policy] {
+					margin: 0 auto;
+					width: 210px;
+					vertical-align: top;
+					display: inline-block;
+					padding: 40px 15px;
+					p {
+						font-size: 17px;
+						width: 215px;
+					}
+				}
+			}
+		}
+		[grid] {
+			padding-left: 82px;
+			width: calc(100% - 164px);
+			[row] {
+				width: 100%;
+				[image] {
+					margin: 5px;
+					height: 120px;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				[image]:first-of-type {
+					margin-left: 0;
+				}
+				[image]:last-of-type {
+					margin-right: 0;
+				}
+				[image="1-3"] {
+					width: 30%;
+				}
+				[image="2-3"] {
+					width: calc(60% + 13px);
+				}
+			}
+		}
+		[contact] {
+			h2 {
+				padding-left: 82px;
+			}
+			form {
+				padding-top: 44px;
+				padding-left: 82px;
+				padding-bottom: 100px;
+				input, textarea {
+					margin: 5px;
+				}
+				button {
+					margin-left: 4px;
+				}
+			}
+		}
+	}
+/* font faces */
+	@font-face {
+		font-family: 'ClanPro-Thin';
+		src: url('fonts/ClanPro-Thin.eot');
+		src: url('fonts/ClanPro-Thin.eot?#iefix') format('embedded-opentype'),
+			url('fonts/ClanPro-Thin.woff') format('woff'),
+			url('fonts/ClanPro-Thin.ttf') format('truetype');
+		font-weight: 100;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'ClanPro-WideBook';
+		src: url('fonts/ClanPro-WideBook.eot');
+		src: url('fonts/ClanPro-WideBook.eot?#iefix') format('embedded-opentype'),
+			url('fonts/ClanPro-WideBook.woff') format('woff'),
+			url('fonts/ClanPro-WideBook.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
