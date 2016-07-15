@@ -48,7 +48,7 @@ h1 { font-size: 22px; font-family: 'ClanPro-WideBook'; }
 [header] .text p { padding-top: 26px; font-size: 20px; max-width: 230px; }
 
 /* politics */
-[politics], [services], [contact], [thanks] { overflow-x: hidden; color: #424242; min-height: 100vh; }
+[politics], [services], [contact], [thanks] { color: #424242; min-height: 100vh; }
 [politics] h1, [services] h1, [contact] h1, [thanks] h1 { padding: 50px 0 50px 12px; }
 [politics] [contains="policies"], [services] [contains="policies"], [contact] [contains="policies"], [thanks] [contains="policies"] { position: relative; display: block; margin: 0 auto; padding-left: 12px; }
 [politics] [contains="policies"] img.logo, [services] [contains="policies"] img.logo, [contact] [contains="policies"] img.logo, [thanks] [contains="policies"] img.logo { position: absolute; right: 0%; width: 30%; -webkit-transform: translateX(50%); -ms-transform: translateX(50%); transform: translateX(50%); min-width: 300px; z-index: -1; }
