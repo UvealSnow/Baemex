@@ -47,6 +47,7 @@
 	.full-width,
 	.full-page {
 		width: 100%;
+		overflow-x: hidden;
 	}
 	.full-height, 
 	.full-page {
@@ -77,10 +78,13 @@
 	}
 /* header */
 	[header] {
+		/*
 		background-image: url('../img/header.jpg');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		*/
+		overflow: hidden;
 		div {
 			position: absolute;
 			top: 0;
@@ -136,6 +140,23 @@
 				max-width: 230px;
 			}
 		}
+		[bg-container] {
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			img[bg-img] {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: 100vw;
+				// max-height: 50%;
+			}
+		}
 	}
 /* politics */
 	[politics], 
@@ -145,6 +166,8 @@
 		// overflow-x: hidden;
 		color: #424242;
 		min-height: 100vh;
+		background-color: white;
+		z-index: 10;
 		h1 {
 			padding: 50px 0 50px 12px;
 		}
@@ -184,6 +207,7 @@
 	}
 /* grid */
 	[grid] {
+		overflow: hidden;
 		padding-left: 12px;
 		width: calc(100% - 24px);
 		[row] {
@@ -194,10 +218,12 @@
 				display: inline-block;
 				vertical-align: top;
 				height: 150px;
+				overflow: hidden;
 				img {
 					width: 100%;
 					height: 100%;
 					z-index: -1;
+					position: absolute;
 				}
 				[filter] {
 					position: absolute;
