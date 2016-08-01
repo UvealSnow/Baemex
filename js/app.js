@@ -8,6 +8,6 @@ $(document).ready (function () {
 	sr.reveal('div[image]', { duration: 1000, origin: 'bottom' }, 200);
 	sr.reveal('div[contact]', { duration: 1000, origin: 'left' }, 200);
 
-	// $("div[image]").imagefill();
-	$("#link").imagefill();
+	$("div[image]").imagefill();
+	$(".bg-container").imagefill();
 });
